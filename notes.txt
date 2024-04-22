@@ -1,0 +1,11 @@
+The graph shows the Root Mean Square Error (RMSE) for different configurations of a Dask cluster. RMSE is a measure of the differences between values predicted by a model and the values observed. Lower RMSE values indicate better fit to the data.
+
+From the chart, we observe the following:
+
+- General Trend: Starting with `info_1_1_32`, there's a decreasing trend in RMSE as the number of CPUs and threads increases, which typically indicates an improvement in model performance.
+
+- Optimal Point: The lowest RMSE is observed at `info_16_4_64`, suggesting that this particular configuration yields the best model performance among those tested.
+
+- Performance Drop: There is an increase in RMSE at `info_28_4_64`, indicating a decrease in model performance. This might suggest that the model's ability to generalize may be getting worse, possibly due to overfitting or inefficient use of computational resources.
+
+The graph illustrates the impact of different computational resources on model accuracy, as measured by RMSE. However, the increase in RMSE with additional resources again suggests that there is a complexity ceiling where additional resources do not translate into better performance, highlighting the importance of fine-tuning the Dask cluster configuration for optimal machine learning model training.

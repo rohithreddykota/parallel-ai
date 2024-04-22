@@ -1,0 +1,75 @@
+# Visit https://docs.rilldata.com/reference/project-files to learn more about Rill project files.
+
+title: Train Fe
+table: train_FE
+dimensions:
+  - label: Key
+    column: key
+    description: ""
+  - label: Pickup Datetime
+    column: pickup_datetime
+    description: ""
+  - label: Pickup Day Of Week
+    column: pickup_day_of_week
+    description: ""
+measures:
+  - name: total_records
+    label: Total records
+    expression: COUNT(*)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: fare_amount
+    label: Sum of Fare Amount
+    expression: SUM(fare_amount)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: pickup_longitude
+    label: Sum of Pickup Longitude
+    expression: SUM(pickup_longitude)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: pickup_latitude
+    label: Sum of Pickup Latitude
+    expression: SUM(pickup_latitude)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: dropoff_longitude
+    label: Sum of Dropoff Longitude
+    expression: SUM(dropoff_longitude)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: dropoff_latitude
+    label: Sum of Dropoff Latitude
+    expression: SUM(dropoff_latitude)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: hav_distance
+    label: Sum of Hav Distance
+    expression: SUM(hav_distance)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: euc_distance
+    label: Sum of Euc Distance
+    expression: SUM(euc_distance)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
